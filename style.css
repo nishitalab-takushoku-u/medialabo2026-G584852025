@@ -1,0 +1,15 @@
+h1{
+    background-color: aqua;
+}
+.line{
+    border: dashed plum;
+}
+a:link{
+    color:blue;
+}
+a:visited{
+    color:purple;
+}
+a:hover{
+    color:navy;
+}
