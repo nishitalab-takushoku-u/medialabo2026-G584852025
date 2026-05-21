@@ -16,9 +16,9 @@ function hantei() {
   kaisu=kaisu++;
   let b=document.querySelector('span#kaisu');
   b.textContent=kaisu;
-  let yoso;
+  let Yosou;
   let c=document.querySelector('input[name="Yosou"]');
-  yoso=Number(c.value);
+  Yosou=Number(c.value);
   // ここまで: テキストボックスに指定された数値を yoso に代入する
   
   // ここから: 正解判定する
@@ -27,10 +27,10 @@ function hantei() {
   if(kaisu>3 || run===1){
     result.textContent="答えは"+kotae+"でした。すでにゲームは終わっています";
   }
-  else if(yoso === kotae){
+  else if(Yosou === kotae){
     result.textContent="正解ですおめでとう";
     run=1;
-  }else if(yoso>kotae &&3>kaisu){
+  }else if(Yosou>kotae &&3>kaisu){
     result.textContent="間違い、答えはもっと小さいです";
   }else if(3>kaisu){
     result.textContent="間違い、答えはもっと大きいです";
