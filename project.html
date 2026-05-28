@@ -4,24 +4,17 @@
     <meta charset="utf-8">
     <title>気象情報</title>
     <link rel="stylesheet" href="project.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
     <script src="weather.js" defer></script>
   </head>
   <body>
     <h1>世界の天気の検索結果</h1>
     <h2>以下の地域に関する情報を検索して表示します</h2>
-    <u>
-        <li>緯度: N25.02</li>
-        <li>経度: E121.31</li>
-        <li>天気:</li>
-        <li>最高気温:</li>
-        <li>最低気温:</li>
-        <li>湿度:</li>
-        <li>風速:</li>
-        <li>風向:</li>
-        <li>都市名: 台北</li>
-    </u>
-    
-    <h2 id="AAA">あああ</h2>
+   <h3 class="line"><label for="toshi">都市名:東京都</label></h3> 
+	<button id="sendRequest">検索</button>
+
+    <div id="result">上から緯度、経度、天気、最高気温、最低気温、湿度、風速、風向、都市名が表示されます。
+    </div>
 
   </body>
 </html>
