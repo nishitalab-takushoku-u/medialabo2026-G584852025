@@ -24,7 +24,7 @@ function hantei() {
   // ここから: 正解判定する
   // 　　　　  正解/不正解のときのメッセージを表示する
   let result=document.querySelector('p#result');
-  if(kaisu>3 || run===1){
+  if(kaisu<3 || run===1){
     result.textContent="答えは"+kotae+"でした。すでにゲームは終わっています";
   }
   else if(Yosou === kotae){
