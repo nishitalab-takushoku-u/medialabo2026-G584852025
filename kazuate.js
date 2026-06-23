@@ -14,7 +14,7 @@ let a=0;
 function hantei() {
   
   // ここから: テキストボックスに指定された数値を yoso に代入する
-  kaisu=kaisu++;
+  kaisu=kaisu+1;
   let b=document.querySelector('span#kaisu');
   b.textContent=kaisu;
   let Yosou;
