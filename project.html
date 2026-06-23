@@ -10,9 +10,25 @@
   <body>
     <h1>世界の天気の検索結果</h1>
     <h2>以下の地域に関する情報を検索して表示します</h2>
-   <h3 class="line"><label for="toshi">都市名:東京都</label></h3> 
-	<button id="sendRequest">検索</button>
+    
+    <select name="Toshimei" id="Toshimei">
+      <option value="">都市選択をお願いします</option>
+      <option value="360630">カイロ</option>
+      <option value="524901">モスクワ</option>
+      <option value="993800">ヨハネスブルク</option>
+      <option value="1816670">北京</option>
+      <option value="1850147">東京</option>
+      <option value="1880252">シンガポール</option>
+      <option value="2147714">シドニー</option>
+      <option value="2643743">ロンドン</option>
+      <option value="2968815">パリ</option>
+      <option value="3451189">リオデジャネイロ</option>
+      <option value="5128581">ニューヨーク</option>
+      <option value="5368361">ロサンゼルス</option>
+    </select>
+    <button id="btn">検索</button>
 
+   
     <div id="result">上から緯度、経度、天気、最高気温、最低気温、湿度、風速、風向、都市名が表示されます。
     </div>
 

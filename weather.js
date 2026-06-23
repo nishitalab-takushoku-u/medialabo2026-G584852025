@@ -66,28 +66,43 @@ p.insertAdjacentElement('beforeend', u);
 }
 
 // 課題6-1 のイベントハンドラ登録処理は以下に記述
-let b = document.querySelector("#sendRequest");
-b.addEventListener('click', sendRequest,);
+let b = document.querySelector('button#btn');
+b.addEventListener('click',sendRequest);
 
 
 
 
 // 課題6-1 のイベントハンドラ sendRequest() の定義
+
+
 function sendRequest() {
+    let s = document.querySelector('select#Toshimei');
+    let idx = s.selectedIndex;
+    let os = s.querySelectorAll('option');
+    let o = os.item(idx);
+
+    console.log('ID=' + o.getAttribute('value'));
+}
+
+function sendRequest(value) {
+  let s = document.querySelector('select#Toshimei');
+  let idx = s.selectedIndex;
+  let os = s.querySelectorAll('option');
+  let o = os.item(idx);
+  console.log('ID'+o.getAttribute('value'));
+
   let resultArea = document.querySelector("#result");
 
   while (resultArea.firstChild) {
         resultArea.removeChild(resultArea.firstChild);
     }
 
- 
-  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/1850147.json';
+  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+o.getAttribute('value')+'.json';
 
   
   axios.get(url).then(showResult).catch(showError).then(finish);     
 	
- 
-
+  
 }
 
 // 課題6-1: 通信が成功した時の処理は以下に記述
